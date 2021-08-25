@@ -3,7 +3,7 @@ import BookControl from './BookControl';
 
 class Book extends React.Component {
   render() {
-    const { book, onChangeShelf } = this.props;
+    const { book, onChangeShelf} = this.props;
 
     return (
       <li>

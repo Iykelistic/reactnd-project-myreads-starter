@@ -10,17 +10,18 @@ class BooksApp extends React.Component {
     books : [],
   }
 
-  componentDidMount() {
-    BooksAPI.getAll().then((books) => {
+  async componentDidMount() {
+    const books = await BooksAPI.getAll()
       this.setState({ books })
-    })
-  }
+    }
+
 
   shelves = [
     {key: 'currentlyReading' , name: 'Currently Reading'},
     {key: 'wantToRead', name: 'Want to Read'},
     {key: 'read', name: 'Read'}
   ]
+
 
  ChangeShelf = (book, shelf) => {
    BooksAPI.update(book, shelf).then(books => {
