@@ -52,7 +52,7 @@ class SearchBooks extends React.Component {
                 <div className="search-books-bar">
                     <HomePage resetSearch={this.resetSearch} />
                     <div className="search-books-input-wrapper">
-                        <input type="text" placholder="Search by title or author" value={this.state.value} onChange={this.handleChange} />
+                        <input type="text" placeholder="Search by title or author" value={this.state.value} onChange={this.handleChange} />
                     </div>
                 </div>
                 <div className="search-books-results">
